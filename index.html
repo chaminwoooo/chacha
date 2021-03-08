@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUJI ONLINE STORE</title>
+    <link rel="icon" href="images/android-icon-48x48.png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/common1.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="center clearFix">
+            <h1 class="logo"><a href="index.html"><img src="images/logo_b.png" alt="logo"></a></h1>
+            <p class="searchBtn"><a href="#void"><img src="images/icon_search.svg" alt="search"></a></p>
+            <div class="gnb">
+                <ul class="gnbTop">
+                    <li><a href="#">매장찾기</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+
+                <ul class="gIcon">
+                    <li><a href="#"><i class="icon-search"></i></a></li>
+                </ul>
+
+                <ul class="gnbBottom">
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                </ul>
+            </div>
+
+            <div class="mainMenu clearFix">
+                <label for="toggle"><img src="images/invisible.svg" alt="menu"></label>
+                <input type="checkbox" id="toggle">
+                <ul class="mainMenuWrap" id="Mmenu">
+
+                    <li>
+                        <a href="#"><span class="mIcon"><img src="images/icon_star.svg" alt="특별기획 아이콘"></span>MUJI
+                            특별기획</a>
+                        <div class="subWrap">
+                            <ul class="sub">
+                                <li><a href="best.html">인기상품</a></li>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">온라인 한정사이즈</a></li>
+                            </ul>
+                            <div class="subImg"><a href="#"><img src="images/mainmenu_special.jpeg"
+                                        alt="MUJI 특별기획 이미지"></a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <a href="#"><span class="mIcon"><img src="images/icon_sale.svg" alt="할인상품 아이콘"></span>할인상품</a>
+                        <div class="subWrap">
+                            <ul class="sub">
+                                <li><a href="#">가격 인하</a></li>
+                                <li><a href="#">기간 한정</a></li>
+                            </ul>
+                            <div class="subImg"><a href="#"><img src="images/mainmenu_sale.jpg" alt="할인상품 이미지"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><span class="mIcon"><img src="images/icon_hanger.svg" alt="의류잡화 아이콘"></span>의류잡화</a>
+                        <div class="subWrap">
+                            <ul class="sub">
+                                <li><a href="#">MUJI LABO</a></li>
+                                <li><a href="#">남성복</a></li>
+                                <li><a href="#">여성복</a></li>
+                                <li><a href="#">아동복 · 마터니티</a></li>
+                                <li><a href="#">이너웨어</a></li>
+                                <li><a href="#">가방 · 신발</a></li>
+                                <li><a href="#">액세서리 · 양말 · 우산</a></li>
+                            </ul>
+                            <div class="subImg"><a href="#"><img src="images/mainmenu_clothes.jpeg" alt="의류잡화 이미지"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><span class="mIcon"><img src="images/icon_cabinet.svg"
+                                    alt="생활잡화 아이콘"></span>생활잡화</a>
+                        <div class="subWrap">
+                            <ul class="sub">
+                                <li><a href="#">패브릭</a></li>
+                                <li><a href="#">가구 · 인테리어</a></li>
+                                <li><a href="#">주방 · 생활용품</a></li>
+                                <li><a href="#">헬스&뷰티 · 아로마</a></li>
+                                <li><a href="#">화장품</a></li>
+                                <li><a href="#">전자제품 · 기프트</a></li>
+                                <li><a href="#">문구</a></li>
+                            </ul>
+                            <div class="subImg"><a href="#"><img src="images/mainmenu_living.jpeg" alt="생활잡화 이미지"></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><span class="mIcon"><img src="images/icon_food.svg" alt="식품"></span>식품</a>
+                        <div class="subWrap">
+                            <ul class="sub">
+                                <li><a href="#">과자 · 음료 · 소스</a></li>
+                            </ul>
+                            <div class="subImg"><a href="#"><img src="images/mainmenu_food.jpeg" alt="식품 이미지"></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="container">
+        <h2 class="blind">mainBanner, event, recommend, series</h2>
+        <section class="mainBanner">
+            <h3 class="blind">mainBanner</h3>
+            <div class="mainBannerWrap">
+                <input type="radio" id="mbtn1" name="mbtn" checked>
+                <label for="mbtn1" class="circle mc1">c1</label>
+
+                <input type="radio" id="mbtn2" name="mbtn">
+                <label for="mbtn2" class="circle mc2">c2</label>
+
+                <input type="radio" id="mbtn3" name="mbtn">
+                <label for="mbtn3" class="circle mc3">c3</label>
+
+                <input type="radio" id="mbtn4" name="mbtn">
+                <label for="mbtn4" class="circle mc4">c4</label>
+
+                <input type="radio" id="mbtn5" name="mbtn">
+                <label for="mbtn5" class="circle mc5">c5</label>
+
+                <label for="mbtn1" class="arrow a1">a1</label>
+                <label for="mbtn2" class="arrow a2">a2</label>
+                <label for="mbtn3" class="arrow a3">a3</label>
+                <label for="mbtn4" class="arrow a4">a4</label>
+                <label for="mbtn5" class="arrow a5">a5</label>
+
+
+                <ul class="mBanner">
+                    <li class="banner1"><a href="#void">Banner1</a></li>
+                    <li class="banner2"><a href="#void">Banner2</a></li>
+                    <li class="banner3"><a href="#void">Banner3</a></li>
+                    <li class="banner4"><a href="#void">Banner4</a></li>
+                    <li class="banner5"><a href="#void">Banner5</a></li>
+                </ul>
+            </div>
+
+
+        </section>
+
+        <div class="cwb">
+            <p><a href="#void">wb</a></p>
+        </div>
+
+        <section class="event">
+            <h3 class="title">EVENT</h3>
+            <div class="center clearFix">
+                <ul class="eventWrap">
+                    <li>
+                        <a href="#"><img src="images/event_cleaning.jpg" alt="청소용품">
+                            <div class="gBox"></div>
+                        </a>
+                        <div class="textBox">
+                            <p class="eTitle"><a href="#">청소용품 2020 &middot; 무인양품</a></p>
+                            <p><a href="#">인기 가정용품을 소개합니다</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/event_xmas.jpg" alt="muji xmas">
+                            <div class="gBox"></div>
+                        </a>
+                        <div class="textBox">
+                            <p class="eTitle"><a href="#">Merry Christmas</a></p>
+                            <p><a href="#">손쉽게, 크리스마스 데코 아이템</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/event_pajama.jpg" alt="파자마">
+                            <div class="gBox"></div>
+                        </a>
+                        <div class="textBox">
+                            <p class="eTitle"><a href="#">파자마</a></p>
+                            <p><a href="#">기분 좋은 숙면을</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/event_linen.jpg" alt="MUJI Linen">
+                            <div class="gBox"></div>
+                        </a>
+                        <div class="textBox">
+                            <p class="eTitle"><a href="#">MUJI Linen</a></p>
+                            <p><a href="#">입을수록, 좋아지는</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/event_aroma.jpg" alt="aroma">
+                            <div class="gBox"></div>
+                        </a>
+                        <div class="textBox">
+                            <p class="eTitle"><a href="#">아로마 디퓨저</a></p>
+                            <p><a href="#">긴장을 풀 시간에, 조용하게</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/event_socks.jpeg" alt="socks">
+                            <div class="gBox"></div>
+                        </a>
+                        <div class="textBox">
+                            <p class="eTitle"><a href="#">이 겨울, 따뜻하게</a></p>
+                            <p><a href="#">겨울 악세사리 SALE UP TO 50%</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="recommend">
+            <h3 class="title">추천상품</h3>
+            <div class="recommendWrap clearFix">
+                <ul class="reProduct center">
+                    <li>
+                        <a href="#void"><img src="images/recommendation_1.jpg" alt="목이 편한 저지 워셔블 하이넥 스웨터"></a>
+                        <div class="textBox">
+                            <p><a href="#void">목이 편한·저지 · 워셔블 하이넥 스웨터</a></p>
+                            <p><a href="#void">49,000원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_2.jpg" alt="발수 다운 코트"></a>
+                        <div class="textBox">
+                            <p><a href="#void">발수 · 다운 코트</a></p>
+                            <p><a href="#void">299,000원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_3.jpg" alt="발수 오가닉 코튼 · 발이 편한 스니커"></a>
+                        <div class="textBox">
+                            <p><a href="#void">발수 오가닉 코튼 · 발이 편한 스니커</a></p>
+                            <p><a href="#void">34,900원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_4.jpg" alt="발수 가로형 마이 토트 백"></a>
+                        <div class="textBox">
+                            <p><a href="#void">발수 가로형 · 마이 토트 백</a></p>
+                            <p><a href="#void">11,900원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_5.jpg" alt="전기 토스터"></a>
+                        <div class="textBox">
+                            <p><a href="#void">전기 토스터</a></p>
+                            <p><a href="#void">83,000원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_6.jpg" alt="후드 코트"></a>
+                        <div class="textBox">
+                            <p><a href="#void">후드 코트</a></p>
+                            <p><a href="#void">139,000원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_6.jpg" alt="후드 코트"></a>
+                        <div class="textBox">
+                            <p><a href="#void">후드 코트</a></p>
+                            <p><a href="#void">139,000원</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#void"><img src="images/recommendation_6.jpg" alt="후드 코트"></a>
+                        <div class="textBox">
+                            <p><a href="#void">후드 코트</a></p>
+                            <p><a href="#void">139,000원</a></p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="arrowBtn">
+                    <a href="#void"><i class="icon-left-open"></i></a>
+                    <a href="#void"><i class="icon-right-open"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="series">
+            <h3 class="blind">series</h3>
+            <div class="center clearFix">
+                <div class="seriesWrap">
+                    <div class="seriesList">
+                        <input type="radio" name="btn" id="btn1" checked>
+                        <label for="btn1" class="store">수납 시리즈</label>
+                        <input type="radio" name="btn" id="btn2">
+                        <label for="btn2" class="fur">가구 시리즈</label>
+                        <input type="radio" name="btn" id="btn3">
+                        <label for="btn3" class="living">가전 &middot; 생활용품</label>
+
+                        <ul class="storeSeries">
+                            <li>
+                                <a href="#void"><img src="images/store_muji_01rtbox_ctbn.jpg" alt="라탄박스"></a>
+                                <p><a href="#void">라탄 박스</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji_02sftbs_ctbn.jpg" alt="소프트 박스"></a>
+                                <p><a href="#void">소프트 박스</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji_03stiwbkt_ctbn.jpg" alt="스테인리스 바스켓"></a>
+                                <p><a href="#void">스테인리스 바스켓</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji_04acr_ctbn.jpg" alt="아크릴 케이스와 벨루어 파티션"></a>
+                                <p><a href="#void">아크릴 케이스와 벨루어 파티션</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji_05fbox_ctbn.jpg" alt="파일 박스"></a>
+                                <p><a href="#void">파일 박스</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji_06plyppl_ctbn.jpg" alt="폴리에틸렌 케이스"></a>
+                                <p><a href="#void">폴리에틸렌 케이스</a></p>
+                            </li>
+
+                            <li>
+                                <a href="#void"><img src="images/store_muji07_mkbx_ctbn.jpg" alt="메이크 박스"></a>
+                                <p><a href="#void">메이크 박스</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji08_abs01_ctbn.jpg" alt="abs수납"></a>
+                                <p><a href="#void">ABS 수납</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/store_muji09_hgr0002_ctbn.jpg" alt="행깅 시리즈"></a>
+                                <p><a href="#void">행깅시리즈</a></p>
+                            </li>
+                        </ul>
+
+                        <ul class="furSeries">
+                            <li>
+                                <a href="#void"><img src="images/fur_01_muji_slim_l_ctbn.jpg" alt="슬림랙"></a>
+                                <p><a href="#void">슬램랙</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/fur_02_muji_livingdiningseries_ctbn.jpg"
+                                        alt="리빙다이닝 시리즈"></a>
+                                <p><a href="#void">리빙다이닝 시리즈</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/fur_03_muji_fitsofa_ctbn.jpg" alt="푹신 소파"></a>
+                                <p><a href="#void">푹신 소파</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/fur_04_muji_0260377tb_ctbn.jpg"
+                                        alt="접이식 테이블과 적층식 스툴"></a>
+                                <p><a href="#void">접이식 테이블과 적층식 스툴</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/fur_05_muji_hanger_ctbn.jpg" alt="행거시리즈"></a>
+                                <p><a href="#void">행거시리즈</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/fur_06_muji_shelves_ctbn.jpg" alt="수납선반 시리즈"></a>
+                                <p><a href="#void">수납선반 시리즈</a></p>
+                            </li>
+
+                            <li>
+                                <a href="#void"><img src="images/fur_muji_07_furniture_tables_ctbn.jpg"
+                                        alt="테이블 시리즈"></a>
+                                <p><a href="#void">테이블 시리즈</a></p>
+                            </li>
+                        </ul>
+
+                        <ul class="livingSeries">
+                            <li>
+                                <a href="#void"><img src="images/liv_01_muji_aroma_ctbn.jpg" alt="아로마디퓨저"></a>
+                                <p><a href="#void">아로마디퓨저</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/liv_02_muji_dustbox_ctbn.jpg" alt="더스트 박스"></a>
+                                <p><a href="#void">더스트 박스</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/liv_03_muji_kitchen_electronics_series_ctbn.jpg"
+                                        alt="키친 가전"></a>
+                                <p><a href="#void">키친 가전</a></p>
+                            </li>
+                            <li>
+                                <a href="#void"><img src="images/liv_04_muji_circulators_ctbn.jpg" alt="선풍기 시리즈"></a>
+                                <p><a href="#void">선풍기 시리즈</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="fwb">
+            <p><a href="#void">wb</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footTop">
+            <div class="center clearFix">
+                <ul class="footLeft">
+                    <li><a href="#">About MUJI</a></li>
+                    <li><a href="#">매장정보</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+
+                <ul class="footRight">
+                    <li><a href="#"><img src="images/muji_passport_icon.png" alt="MUJI passport"></a></li>
+                    <li><a href="#"><img src="images/sns_facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/sns_insta.png" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footBottom">
+            <div class="center clearFix">
+                <ul class="clearFix">
+                    <li><a href="#">LECS 안내 및 문의</a></li>
+                    <li><a href="#">롯데쇼핑e커머스사업부 소개</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">청소년보호방침</a></li>
+                    <li><a href="#">회원가입/탈퇴</a></li>
+                </ul>
+                <p class="footLogo"><a href="#"><img src="images/foot_logo_lotteon.gif" alt="lotteecom logo"></a>
+                </p>
+
+                <address>
+                    <p>MUJI 온라인스토어는 롯데LECS(www.lecs.com)를 이용하고 있습니다</p>
+                    <p>롯데쇼핑 주식회사 대표이사 강희태</p>
+                    <p>서울특별시 송파구 올림픽로 300 롯데월드타워 26층</p>
+                    <p>사업자등록번호 : 529-85-00774 (롯데쇼핑(주)e커머스사업부)</p>
+                    <p>통신판매업 신고 : 2019-서울송파-0158</p>
+                    <p>고객만족센터 : 1577-2892 muji@lotte.net 공정거래위원회</p>
+                    <p>호스팅 서비스 사업자 : 롯데쇼핑(주) e커머스사업부</p>
+                    <p class="copyright">Copyright LOTTE SHOPPING Co., Ltd. e-commerce Business Division All right
+                        reserved.</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="topBtn">
+            <p><a href="#"><img src="images/icon_arrow_top.svg" alt="위로펼침 화살표"></a></p>
+        </div>
+
+    </footer>
+
+
+    <aside class="fixed">
+
+        <ul class="fixedMenu">
+            <li><a href="#"><img src="images/icon_menu.svg" alt="menu"><span>MENU</span></a>
+            </li>
+            <li><a href="#void"><img src="images/icon_delivery_van.svg" alt="delivery"><span>배송/조회</span></a></li>
+            <li><a href="index.html"><img src="images/icon_home.svg" alt="home"><span>HOME</span></a></li>
+            <li><a href="#void"><img src="images/icon_people.svg" alt="mypage"><span>MY PAGE</span></a>
+            </li>
+            <li><a href="#void"><img src="images/icon_recent.svg" alt="recent"><span>RECENT</span></a></li>
+        </ul>
+    </aside>
+</body>
+
+</html>
