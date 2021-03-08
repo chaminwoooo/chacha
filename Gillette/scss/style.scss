@@ -1,0 +1,991 @@
+ @import 'common';
+
+ // 변수
+ $메인컬러 : #0B1432;
+ $서브컬러 : #192F6E;
+
+ // mixin
+ @mixin BannerBtn {
+     a {
+         position: absolute;
+         top: 80%;
+         width: 200px;
+     }
+
+     .btn1 {
+         left: 52%;
+     }
+
+     .btn2 {
+         right: 52%;
+     }
+
+     @include mobile768() {
+         a {
+             width: 130px;
+             font-size: 14px;
+         }
+
+     }
+
+     @include mobile1024() {
+         a {
+             width: 130px;
+             font-size: 14px;
+         }
+     }
+ }
+
+ @mixin BoxShadow {
+     box-shadow: 1px 1px 3px #adb5bd;
+ }
+
+ @mixin Tip {
+
+     p {
+         color: white;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%);
+         font-size: 18px;
+         text-align: center;
+     }
+
+     a {
+         position: absolute;
+         bottom: 20%;
+         left: 50%;
+         transform: translate(-50%);
+         width: 150px;
+     }
+
+     @include mobile768() {
+         p {
+             width: 100%
+         }
+
+         a {
+             bottom: 6%;
+         }
+     }
+
+     @include mobile1024() {
+         p {
+             width: 100%
+         }
+
+         a {
+             bottom: 6%;
+         }
+     }
+ }
+
+ @mixin mobile768 {
+     @media screen and (max-width:768px) {
+         @content;
+     }
+ }
+
+ @mixin mobile1024 {
+     @media screen and (min-width:769px) and (max-width:1024px) {
+         @content;
+     }
+ }
+
+ // keyframes
+ @keyframes arrow {
+     from {
+         bottom: 4vh;
+     }
+
+     to {
+         bottom: 2vh;
+     }
+
+ }
+
+ // header
+ header {
+     //  display: none;
+     position: fixed;
+     width: 100%;
+     height: 80px;
+     background-color: white;
+     z-index: 1000;
+     @include BoxShadow();
+
+     @include mobile768() {
+         min-width: 100%;
+         height: 60px;
+     }
+
+     @include mobile1024() {
+         min-width: 100%;
+         height: 60px;
+     }
+
+     >.center {
+         position: relative;
+     }
+
+     .logo {
+         text-align: center;
+         line-height: 70px;
+
+         @include mobile768() {
+             line-height: 50px;
+         }
+
+         @include mobile1024() {
+             line-height: 50px;
+         }
+
+
+         img {
+             width: 140px;
+
+             @include mobile768() {
+                 width: 110px;
+             }
+
+             @include mobile1024() {
+                 width: 110px;
+             }
+         }
+     }
+
+     i {
+         display: block;
+         width: 32px;
+     }
+
+     .hamBtn {
+         display: none;
+
+         @include mobile768() {
+             display: block;
+             position: absolute;
+             top: -6px;
+             left: 20px;
+
+             img {
+                 width: 32px;
+             }
+         }
+
+         @include mobile1024() {
+             display: block;
+             position: absolute;
+             top: -6px;
+             left: 20px;
+
+             img {
+                 width: 32px;
+             }
+         }
+
+     }
+
+     .search {
+         position: absolute;
+         top: 4px;
+         right: 0px;
+
+         @include mobile768() {
+             top: -6px;
+             right: 16px;
+         }
+
+         @include mobile1024() {
+             top: -6px;
+             right: 16px;
+         }
+     }
+
+     .menu {
+         position: absolute;
+         top: 0px;
+         z-index: 500;
+
+         @include mobile768() {
+             top: 8vh;
+             display: none;
+         }
+
+         @include mobile1024() {
+             top: 8vh;
+             display: none;
+         }
+
+         >li {
+             float: left;
+             padding: 0 24px;
+             line-height: 80px;
+
+             @include mobile768() {
+                 float: none;
+                 position: relative;
+                 right: 100px;
+                 opacity: 0;
+             }
+
+             @include mobile1024() {
+                 float: none;
+             }
+
+             >a {
+                 font-size: 18px;
+                 font-weight: bold;
+                 color: $서브컬러;
+                 position: relative;
+
+                 &::after {
+                     content: "";
+                     display: block;
+                     width: 0%;
+                     height: 2px;
+                     background-color: $서브컬러;
+                     position: absolute;
+                     bottom: -20px;
+                     left: 50%;
+                     transform: translate(-50%);
+                     transition: 0.8s;
+                 }
+             }
+
+             &:hover .sub {
+                 display: block;
+             }
+
+             &:hover .subImgWrap {
+                 display: none;
+             }
+
+             &:hover>a::after {
+                 width: 100%;
+
+                 @include mobile768() {
+                     width: 0%;
+                 }
+
+                 @include mobile1024() {
+                     width: 0%;
+                 }
+             }
+         }
+
+         .sub {
+             display: none;
+             position: absolute;
+             left: 0;
+             z-index: 50;
+             width: 100%;
+
+             //  background-color: yellowgreen;
+
+             @include mobile768() {
+                 position: static;
+             }
+
+             @include mobile1024() {
+                 position: static;
+             }
+
+             >li {
+                 text-align: left;
+                 line-height: 4;
+                 padding-left: 24px;
+
+                 // background-color: yellowgreen;
+
+                 @include mobile768() {
+                     line-height: 2.5;
+                 }
+
+                 @include mobile1024() {
+                     line-height: 2.5;
+                 }
+
+                 &:hover .subImgWrap {
+                     display: block;
+
+                     @include mobile768() {
+                         display: none;
+                     }
+
+                     @include mobile1024() {
+                         //  display: block;
+                     }
+                 }
+
+                 &:hover>a {
+                     color: $서브컬러;
+                     transition: 0.3s;
+                 }
+
+                 >a {
+                     font-size: 18px;
+                     font-weight: 600;
+                 }
+             }
+
+             .subImgWrap {
+                 display: none;
+                 position: absolute;
+                 top: 30px;
+                 left: 250px;
+
+                 .subImg {
+                     display: flex;
+                     flex-wrap: nowrap;
+
+                     >li {
+                         float: left;
+                         padding: 0 40px;
+                         opacity: 0;
+                         position: relative;
+                         top: 100px;
+
+                         a:hover>p {
+                             color: $서브컬러;
+                             transform: scale(1.1);
+                             transition: 0.8s;
+                         }
+
+                         a:hover img {
+                             transform: scale(1.05);
+                             transition: 0.8s;
+                         }
+
+                         p {
+                             text-align: center;
+                             line-height: 1.2;
+                             word-break: keep-all;
+                             margin-top: 8px;
+                             font-size: 16px;
+                             font-weight: 500;
+                         }
+
+                         img {
+                             width: 200px;
+                         }
+                     }
+                 }
+             }
+         }
+     }
+
+     .bg {
+         display: none;
+         position: absolute;
+         top: 80px;
+         width: 100%;
+         height: 520px;
+         background-color: white;
+         // background-color: khaki;
+         z-index: 1;
+         @include BoxShadow();
+
+         @include mobile768() {
+             top: 60px;
+             // background-color: gray;
+             height: 80vh;
+         }
+
+         @include mobile1024() {
+             top: 60px;
+             height: 80vh;
+         }
+     }
+ }
+
+ // container
+ #container {
+     //  display: none;
+
+     //  videoBox
+     .videoBox {
+         position: relative;
+         overflow: hidden;
+         height: 100vh;
+
+         @include mobile768() {
+             display: none;
+         }
+
+         @include mobile1024() {
+             display: none;
+             width: 100%;
+             height: 100%;
+         }
+
+         video {
+             //  height: 100%;
+             width: 100%;
+
+         }
+
+         .dArrow {
+             position: absolute;
+             bottom: 4vh;
+             left: 50%;
+             transform: translate(-50%);
+             animation-duration: 0.7s;
+             animation-name: arrow;
+             animation-iteration-count: infinite;
+             animation-direction: alternate;
+
+             img {
+                 width: 30px;
+             }
+
+             p {
+                 color: white;
+                 text-align: center;
+                 text-indent: -4px;
+             }
+
+             &:hover p {
+                 color: $서브컬러;
+             }
+         }
+     }
+
+     // kind
+     .kindBox {
+         display: flex;
+         justify-content: space-around;
+         margin: 60px 0 120px;
+         padding-top: 80px;
+
+         @include mobile768() {
+             margin: 0;
+             padding-top: 0;
+             padding: 30px 0;
+             width: 100%;
+             flex-wrap: wrap;
+         }
+
+         @include mobile1024() {
+             margin: 0 0 80px;
+             padding-top: 40px;
+             width: 100%;
+             flex-wrap: wrap;
+         }
+
+
+         li {
+             position: relative;
+             top: 80px;
+             opacity: 0;
+
+             &:hover p {
+                 color: #364fc7;
+             }
+
+             &:hover img {
+                 transform: scale(1.05);
+                 transition: 1.2s;
+             }
+
+             @include mobile768() {
+                 padding: 4vh 4px;
+                 box-sizing: border-box;
+                 text-align: center;
+                 width: 50%;
+                 top: 0;
+                 opacity: 1;
+             }
+
+             @include mobile1024() {
+                 padding: 2vh 0;
+                 box-sizing: border-box;
+                 text-align: center;
+                 width: 25%;
+                 word-break: keep-all;
+                 top: 0;
+                 opacity: 1;
+             }
+
+             a {
+
+
+                 @include mobile768() {
+                     opacity: 1;
+                 }
+
+                 @include mobile1024() {
+                     opacity: 1;
+                 }
+             }
+
+         }
+
+         p {
+             position: absolute;
+             bottom: -40px;
+             left: 50%;
+             transform: translateX(-50%);
+             font-size: 18px;
+             font-weight: 500;
+
+             @include mobile768() {
+                 font-size: 16px;
+                 font-weight: 600px;
+                 text-align: center;
+                 word-break: keep-all;
+                 bottom: -4px;
+             }
+         }
+
+         img {
+             width: 100%;
+
+             @include mobile768() {
+                 width: 80%
+             }
+         }
+     }
+
+     //banner
+     .banner {
+         width: 100%;
+         height: 600px;
+
+         .center {
+             position: relative;
+         }
+
+         background: {
+             image: url(../images/banner.webp);
+             position: center center;
+             repeat: no-repeat;
+             size: cover;
+         }
+
+         @include mobile768() {
+             height: 300px;
+             background-position: left;
+         }
+
+         @include mobile1024() {
+             height: 400px;
+         }
+
+         p {
+             text-align: center;
+             position: relative;
+             top: 260px;
+             color: white;
+
+             font: {
+                 size: 42px;
+                 weight: 600;
+             }
+
+             @include mobile768() {
+                 top: 50px;
+                 font-size: 32px;
+                 color: black;
+             }
+
+             @include mobile1024() {
+                 top: 100px;
+                 color: black;
+             }
+         }
+
+         a {
+             position: absolute;
+             top: 480px;
+             transform: translateX(-50%);
+             width: 150px;
+
+             @include mobile768() {
+                 top: 0;
+                 transform: translateX(0);
+             }
+
+             @include mobile1024() {
+                 top: 300px;
+             }
+
+
+         }
+
+         .kitBtn {
+             left: 44%;
+
+             @include mobile768() {
+                 top: 190px;
+                 width: 90%;
+                 left: 50%;
+                 transform: translateX(-50%);
+             }
+
+             @include mobile1024() {
+                 left: 38%
+             }
+         }
+
+         .itemBtn {
+             left: 56%;
+
+             @include mobile768() {
+                 top: 240px;
+                 width: 90%;
+                 left: 50%;
+                 transform: translateX(-50%);
+             }
+
+             @include mobile1024() {
+                 left: 62%;
+             }
+         }
+     }
+
+     /* advisor */
+     .advisor {
+         height: 400px;
+         margin-bottom: 80px;
+
+         .center {
+             position: relative;
+         }
+
+         img {
+             position: absolute;
+             top: 60px;
+             left: 400px;
+
+             @include mobile768() {
+                 top: 0;
+                 left: 50%;
+                 transform: translateX(-50%);
+             }
+
+             @include mobile1024() {
+                 top: 50px;
+                 left: 20%;
+                 transform: translateX(-20%);
+             }
+         }
+
+         .textBox {
+             position: absolute;
+             top: 100px;
+             right: 400px;
+
+             @include mobile768() {
+                 width: 280px;
+                 top: 280px;
+                 right: 50%;
+                 transform: translateX(50%);
+                 text-align: center;
+             }
+
+             @include mobile1024() {
+                 // width: 280px;
+                 top: 100px;
+                 right: 15%;
+                 transform: translateX(15%);
+             }
+
+             .aTitle {
+                 font : {
+                     size: 24px;
+                     weight: 600;
+                 }
+
+                 margin-bottom: 16px;
+             }
+
+             .aText {
+                 font-size: 20px;
+                 line-height: 2;
+                 padding-bottom: 20px;
+             }
+         }
+
+         a {
+             width: 200px;
+             color: white;
+         }
+     }
+
+     /* halfBanner */
+     .halfBanner {
+         height: 500px;
+         margin: 20px 0 100px;
+         box-sizing: border-box;
+         opacity: 0;
+         position: relative;
+         top: 20px;
+
+         @include mobile768() {
+             margin: 170px 0 0;
+             opacity: 1;
+             top: 0;
+         }
+
+         @include mobile1024() {
+             opacity: 1;
+             top: 0;
+         }
+
+         .bTitle {
+             margin-top: -60px;
+             margin-left: 12px;
+
+             font : {
+                 size: 32px;
+                 weight: bold;
+             }
+
+             @include mobile768() {
+                 margin-top: 0;
+                 font-size: 28px;
+             }
+         }
+
+         .bannerWrap {
+             display: flex;
+             flex-wrap: nowrap;
+
+             @include mobile768() {
+                 flex-wrap: wrap;
+             }
+         }
+
+         .leftBanner {
+             position: relative;
+             width: 50%;
+             height: 500px;
+
+             background: {
+                 image: url(../images/heated-razor.jpg);
+                 position: center center;
+                 size: cover;
+             }
+
+             @include BannerBtn();
+
+             @include mobile768 {
+                 width: 100%;
+                 height: 400px;
+             }
+         }
+
+         .rightBanner {
+             position: relative;
+             width: 50%;
+             height: 500px;
+
+             background: {
+                 image: url(../images/gillette95.jpg);
+                 position: center center;
+                 size: cover;
+             }
+
+             @include BannerBtn();
+
+             @include mobile768() {
+                 width: 100%;
+                 height: 400px;
+             }
+         }
+     }
+
+     //  tip
+     .tip {
+         margin-bottom: 100px;
+         opacity: 0;
+         position: relative;
+         top: 20px;
+
+         @include mobile768() {
+             margin-bottom: 100px;
+             opacity: 1;
+             top: 0;
+         }
+
+         @include mobile1024() {
+             opacity: 1;
+             top: 0;
+         }
+
+         .wrap {
+             display: flex;
+             justify-content: center;
+             box-sizing: border-box;
+
+             .leftTip {
+                 width: 50%;
+                 margin-right: 20px;
+                 position: relative;
+                 @include Tip();
+             }
+
+             .rightTip {
+                 width: 50%;
+                 margin-left: 20px;
+                 position: relative;
+                 @include Tip();
+             }
+
+             img {
+                 width: 100%;
+             }
+
+             @include mobile768() {
+                 margin-top: 300px;
+                 flex-wrap: wrap;
+
+                 .leftTip {
+                     width: 100%;
+                     margin-right: 0;
+                 }
+
+                 .rightTip {
+                     width: 100%;
+                     margin-left: 0;
+                 }
+             }
+         }
+     }
+ }
+
+ // footer
+ footer {
+     //    display: none;
+
+     background-color: $메인컬러;
+     position: relative;
+
+     .footLogo {
+         padding: 40px 0 20px;
+         text-align: center;
+
+         img {
+             width: 140px;
+         }
+
+         @include mobile768() {
+             padding: 20px 0 40px;
+
+             img {
+                 width: 100px;
+             }
+         }
+     }
+
+     .footLeft {
+         float: left;
+         margin-left: 100px;
+
+         @include mobile768() {
+             position: relative;
+             margin-left: 0;
+             left: 50%;
+             transform: translateX(-50%);
+             text-align: center;
+         }
+
+         ul {
+             float: left;
+             padding: 0 40px;
+
+             @include mobile768() {
+                 padding: 0 4vw;
+             }
+
+             li {
+                 font-size: 18px;
+                 line-height: 3;
+
+                 a {
+                     color: white;
+                     text-decoration: none;
+                 }
+             }
+
+             @include mobile768() {
+                 li {
+                     font-size: 16px;
+
+                     a {
+                         word-break: keep-all;
+                     }
+                 }
+
+             }
+         }
+     }
+
+     .footRight {
+         float: right;
+        //  background-color: khaki;
+
+         ul {
+             li {
+                 float: left;
+                 padding: 12px;
+
+                 img {
+                     width: 40px;
+                 }
+             }
+         }
+
+         @include mobile768() {
+             //  background-color: khaki;
+             margin: 0;
+             padding: 0;
+             position: absolute;
+             top: -20%;
+             left: 50%;
+             transform: translateX(-50%);
+             width: 260px;
+         }
+     }
+
+     address {
+
+         padding: 40px 0 10px;
+         text-align: center;
+         color: white;
+
+         span {
+             padding: 0 5px;
+         }
+
+         @include mobile768() {
+             font-size: 14px;
+
+             span {
+                 display: block;
+                 padding: 2px 0;
+             }
+         }
+     }
+ }
+
+ aside {
+     position: fixed;
+     right: 30px;
+     bottom: 30px;
+     text-align: center;
+
+     p {
+         padding: 4px 0;
+         width: 60px;
+         height: 60px;
+         background-color: rgba(0, 0, 0, 0.8);
+     }
+
+     span {
+         display: block;
+         color: white;
+     }
+ }

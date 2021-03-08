@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*기본사항*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd,
+li,
+input,
+button,
+label,
+p,
+form,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+button,
+input {
+  vertical-align: middle;
+}
+
+header,
+footer,
+nav,
+section,
+article {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 기본설정 */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #111;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.center {
+  max-width: 1420px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.blind {
+  position: absolute;
+  text-indent: -9999px;
+}

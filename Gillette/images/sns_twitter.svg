@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0B1432;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st3{mask:url(#mask-4_1_);fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<title>13B36674-8AB8-432D-A59F-B71BF71DFD27</title>
+<desc>Created with sketchtool.</desc>
+<g id="Asset-Artboard-Page">
+	<g>
+		<rect id="Bounding-Box" x="6" y="6.3" class="st0" width="24" height="24"/>
+		<g id="Group-3">
+			<g id="Clip-2">
+			</g>
+		</g>
+		<g>
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+					<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36" id="mask-4_1_">
+				<g class="st1">
+					<polygon id="path-3_1_" class="st2" points="0,0 36,0 36,36 0,36 					"/>
+				</g>
+			</mask>
+			<path id="Fill-1" class="st3" d="M25.2,15.2c0,0.2,0,0.3,0,0.5c0,4.9-3.7,10.5-10.5,10.5c-2.1,0-4-0.6-5.7-1.7
+				c0.3,0,0.6,0.1,0.9,0.1c1.7,0,3.3-0.6,4.6-1.6c-1.6,0-3-1.1-3.5-2.6c0.2,0,0.5,0.1,0.7,0.1c0.3,0,0.7,0,1-0.1
+				c-1.7-0.3-3-1.8-3-3.6v0c0.5,0.3,1.1,0.4,1.7,0.5c-1-0.7-1.6-1.8-1.6-3.1c0-0.7,0.2-1.3,0.5-1.9c1.8,2.2,4.6,3.7,7.6,3.9
+				c-0.1-0.3-0.1-0.6-0.1-0.8c0-2,1.7-3.7,3.7-3.7c1.1,0,2,0.4,2.7,1.2c0.8-0.2,1.6-0.5,2.3-0.9c-0.3,0.9-0.9,1.6-1.6,2
+				c0.7-0.1,1.5-0.3,2.1-0.6C26.5,14,25.9,14.7,25.2,15.2 M18,0C8.1,0,0,8.1,0,18c0,9.9,8.1,18,18,18s18-8.1,18-18
+				C36,8.1,27.9,0,18,0"/>
+		</g>
+	</g>
+</g>
+</svg>
