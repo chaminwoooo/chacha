@@ -1,0 +1,565 @@
+$메인컬러 : #ee0000;
+
+@import 'common';
+
+@mixin mobile1024 {
+    @media screen and (min-width:769px) and (max-width:1024px) {
+        @content;
+    }
+}
+
+@mixin mobile768 {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mobile426 {
+    @media screen and (max-width:426px) {
+        @content;
+    }
+}
+
+
+// header
+header {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    // position: relative;
+    position: fixed;
+    z-index: 1000;
+    
+
+    @include mobile426() {
+        height: 50px;
+        // display: none;
+    }
+}
+
+.logo {
+    text-align: center;
+
+    img {
+        width: 120px;
+
+        @include mobile426() {
+            width: 80px;
+        }
+    }
+}
+
+.menuBtn {
+    position: absolute;
+    top: 16px;
+    left: 40px;
+    z-index: 150;
+
+    @include mobile426() {
+        top: 8px;
+        left: 24px;
+    }
+
+    a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/menuBtn.svg);
+        background-repeat: no-repeat;
+
+        @include mobile426() {
+            width: 32px;
+        }
+
+        & .acitve {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-image: url(../images/Close.svg);
+        }
+    }
+}
+
+.menu {
+    display: none;
+    width: 20%;
+    height: 1080px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    // padding-right: 30px;
+
+    @include mobile426() {
+        // display: block;
+        width: 44%;
+    }
+
+    @include mobile768() {
+        // display: block;
+        width: 40%;
+    }
+
+    @include mobile1024() {
+        // display: block;
+        width: 30%;
+    }
+
+
+    img {
+        width: 40px;
+    }
+
+    >li {
+        font-size: 24px;
+        line-height: 3.5;
+        padding-left: 40px;
+        position: relative;
+
+        @include mobile426() {
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        &:first-child {
+            padding-top: 100px;
+        }
+
+        &:first-child:hover .subMenu {
+            display: block;
+        }
+
+        &:hover>a {
+            color: $메인컬러;
+        }
+
+        &:hover::after {
+            width: 60%;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0%;
+            height: 2px;
+            bottom: 0;
+            left: 40px;
+            background-color: rgba(238, 0, 0, 0.5);
+            transition: 0.7s;
+        }
+    }
+
+    .subMenu {
+        display: none;
+        position: absolute;
+        top: 100px;
+        left: 100%;
+        background-color: white;
+        overflow: hidden;
+        width: 100%;
+
+        li {
+            padding: 6px 12px;
+            position: relative;
+
+            &:first-child {
+                padding-top: 8px;
+            }
+
+            &:last-child {
+                padding-bottom: 8px;
+            }
+
+            &:hover img {
+                transform: scale(1.05);
+                transition: 1s;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+
+
+// container
+
+// videoWrap
+.videoWrap {
+    z-index: 1;
+    position: relative;
+    // display: none;
+
+    .videoBox video {
+        width: 100%;
+
+        @include mobile426() {
+            width: 100vw;
+        }
+    }
+
+    .videoText {
+        position: absolute;
+        top: 40%;
+        left: 100px;
+        color: white;
+        font-size: 56px;
+        font-weight: 500;
+        line-height: 1.5;
+
+        @include mobile426() {
+            font-size: 32px;
+            left: 10%;
+        }
+    }
+}
+
+// eventWrap
+.eventWrap {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    .event {
+        overflow: hidden;
+        padding: 100px 0 100px;
+        width: 200%;
+        position: relative;
+        @include mobile426(){
+            width: 300%;
+        }
+
+        li {
+            float: left;
+            width: calc(100%/6);
+            box-sizing: border-box;
+            padding: 0 10px;
+            box-sizing: border-box;
+        
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .arrow {
+        cursor: pointer;
+
+        .icon-left {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            color: #495057;
+            background-color: rgba(222, 226, 230, 0.2);
+
+            @include mobile426() {
+                font-size: 20px;
+            }
+
+        }
+
+        .icon-right {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            color: #495057;
+            background-color: rgba(222, 226, 230, 0.2);
+
+            @include mobile426() {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// photoWrap
+.photoWrap {
+    position: relative;
+
+    li:hover {
+        transform: scale(1.05);
+        transition: 1s;
+    }
+
+    p {
+        color: white;
+        font-size: 42px;
+
+        @include mobile426() {
+            font-size: 32px;
+        }
+
+    }
+
+    .leftPhoto {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 50%;
+        overflow: hidden;
+
+
+        @include mobile768() {
+            position: static;
+            width: 100%;
+        }
+
+        li {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 350px;
+
+                @include mobile768() {
+                    width: 100vw;
+                    height: 50vh;
+                }
+            }
+
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .rightPhoto {
+        position: absolute;
+        right: 0;
+        top: 100px;
+        width: 50%;
+        overflow: hidden;
+
+        @include mobile768() {
+            position: static;
+            width: 100%;
+        }
+
+        li {
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 700px;
+
+                @include mobile768() {
+                    height: 50vh;
+                }
+            }
+
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+// brandWrap
+.brandWrap {
+    margin-top: 900px;
+    // background-color: blue;
+    height: 350px;
+    position: relative;
+
+    @include mobile426() {
+        margin-bottom: -400px;
+    }
+
+    @include mobile768() {
+        margin-top: 100px;
+    }
+
+    .sprite {
+        position: absolute;
+        left: -10%;
+
+        @include mobile426() {
+            img {
+                width: 100%;
+                height: 50vh;
+            }
+        }
+
+        @include mobile768() {
+            position: relative;
+            left: 0;
+
+            img {
+                width: 100vw;
+
+            }
+        }
+
+        @include mobile1024() {
+            position: relative;
+            left: 0;
+
+            img {
+                width: 100vw;
+            }
+        }
+
+        .brandText {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mobile426() {
+                font-size: 6px;
+                top: 40%;
+            }
+
+            p {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+
+                @include mobile426() {
+                    font-size: 24px;
+                }
+
+            }
+
+        }
+
+        a {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+        }
+    }
+
+    .fanta {
+        position: absolute;
+        right: -10%;
+
+        @include mobile426() {
+            img {
+                width: 100vw;
+                height: 50vh;
+            }
+        }
+
+        @include mobile768() {
+            position: relative;
+            right: 0;
+            overflow: hidden;
+        }
+
+        @include mobile1024() {
+            position: relative;
+            left: 0;
+
+            img {
+                width: 100vw;
+            }
+        }
+
+
+        .brandText {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mobile426() {
+                top: 40%;
+                font-size: 6px;
+            }
+
+
+            p {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+
+                @include mobile426() {
+                    font-size: 24px;
+                }
+
+            }
+        }
+
+
+        a {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+        }
+    }
+}
+
+// snsWrap
+.snsWrap {
+    background-color: $메인컬러;
+    margin-top: 100px;
+    // display: none;
+
+    @include mobile426() {
+        // margin-bottom: 40px;
+    }
+
+    @include mobile768() {
+        margin-top: 450px;
+    }
+
+    @include mobile1024() {
+        margin-top: 650px;
+    }
+
+    .sns {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        li {
+            padding: 30px 50px;
+            box-sizing: border-box;
+
+            @include mobile426() {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    overflow: hidden;
+    background-color: #dee2e6;
+    // display: none;
+
+    .footTop {
+        text-align: center;
+
+        li {
+            padding: 20px 0 10px;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: #495057;
+        padding: 20px 0;
+    }
+}
