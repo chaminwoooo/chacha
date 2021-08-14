@@ -4,7 +4,7 @@ a {
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
 }
 
@@ -177,6 +177,15 @@ aside {
   top: 0;
 }
 
+@-webkit-keyframes arrow {
+  from {
+    bottom: 4vh;
+  }
+  to {
+    bottom: 2vh;
+  }
+}
+
 @keyframes arrow {
   from {
     bottom: 4vh;
@@ -185,63 +194,77 @@ aside {
     bottom: 2vh;
   }
 }
+
 header {
   position: fixed;
   width: 100%;
   height: 80px;
   background-color: white;
   z-index: 1000;
-  box-shadow: 1px 1px 3px #adb5bd;
+  -webkit-box-shadow: 1px 1px 3px #adb5bd;
+          box-shadow: 1px 1px 3px #adb5bd;
 }
+
 @media screen and (max-width: 768px) {
   header {
     min-width: 100%;
     height: 60px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header {
     min-width: 100%;
     height: 60px;
   }
 }
+
 header > .center {
   position: relative;
 }
+
 header .logo {
   text-align: center;
   line-height: 70px;
 }
+
 @media screen and (max-width: 768px) {
   header .logo {
     line-height: 50px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .logo {
     line-height: 50px;
   }
 }
+
 header .logo img {
   width: 140px;
 }
+
 @media screen and (max-width: 768px) {
   header .logo img {
     width: 110px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .logo img {
     width: 110px;
   }
 }
+
 header i {
   display: block;
   width: 32px;
 }
+
 header .hamBtn {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   header .hamBtn {
     display: block;
@@ -253,6 +276,7 @@ header .hamBtn {
     width: 32px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .hamBtn {
     display: block;
@@ -264,45 +288,53 @@ header .hamBtn {
     width: 32px;
   }
 }
+
 header .search {
   position: absolute;
   top: 4px;
   right: 0px;
 }
+
 @media screen and (max-width: 768px) {
   header .search {
     top: -6px;
     right: 16px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .search {
     top: -6px;
     right: 16px;
   }
 }
+
 header .menu {
   position: absolute;
   top: 0px;
   z-index: 500;
 }
+
 @media screen and (max-width: 768px) {
   header .menu {
     top: 8vh;
     display: none;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu {
     top: 8vh;
     display: none;
   }
 }
+
 header .menu > li {
   float: left;
   padding: 0 24px;
   line-height: 80px;
 }
+
 @media screen and (max-width: 768px) {
   header .menu > li {
     float: none;
@@ -311,17 +343,20 @@ header .menu > li {
     opacity: 0;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu > li {
     float: none;
   }
 }
+
 header .menu > li > a {
   font-size: 18px;
   font-weight: bold;
   color: #192F6E;
   position: relative;
 }
+
 header .menu > li > a::after {
   content: "";
   display: block;
@@ -331,28 +366,36 @@ header .menu > li > a::after {
   position: absolute;
   bottom: -20px;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 header .menu > li:hover .sub {
   display: block;
 }
+
 header .menu > li:hover .subImgWrap {
   display: none;
 }
+
 header .menu > li:hover > a::after {
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   header .menu > li:hover > a::after {
     width: 0%;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu > li:hover > a::after {
     width: 0%;
   }
 }
+
 header .menu .sub {
   display: none;
   position: absolute;
@@ -360,57 +403,73 @@ header .menu .sub {
   z-index: 50;
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   header .menu .sub {
     position: static;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu .sub {
     position: static;
   }
 }
+
 header .menu .sub > li {
   text-align: left;
   line-height: 4;
   padding-left: 24px;
 }
+
 @media screen and (max-width: 768px) {
   header .menu .sub > li {
     line-height: 2.5;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu .sub > li {
     line-height: 2.5;
   }
 }
+
 header .menu .sub > li:hover .subImgWrap {
   display: block;
 }
+
 @media screen and (max-width: 768px) {
   header .menu .sub > li:hover .subImgWrap {
     display: none;
   }
 }
+
 header .menu .sub > li:hover > a {
   color: #192F6E;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 header .menu .sub > li > a {
   font-size: 18px;
   font-weight: 600;
 }
+
 header .menu .sub .subImgWrap {
   display: none;
   position: absolute;
   top: 30px;
   left: 250px;
 }
+
 header .menu .sub .subImgWrap .subImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
+
 header .menu .sub .subImgWrap .subImg > li {
   float: left;
   padding: 0 40px;
@@ -418,15 +477,22 @@ header .menu .sub .subImgWrap .subImg > li {
   position: relative;
   top: 100px;
 }
+
 header .menu .sub .subImgWrap .subImg > li a:hover > p {
   color: #192F6E;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 header .menu .sub .subImgWrap .subImg > li a:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 header .menu .sub .subImgWrap .subImg > li p {
   text-align: center;
   line-height: 1.2;
@@ -435,9 +501,11 @@ header .menu .sub .subImgWrap .subImg > li p {
   font-size: 16px;
   font-weight: 500;
 }
+
 header .menu .sub .subImgWrap .subImg > li img {
   width: 200px;
 }
+
 header .bg {
   display: none;
   position: absolute;
@@ -446,14 +514,17 @@ header .bg {
   height: 520px;
   background-color: white;
   z-index: 1;
-  box-shadow: 1px 1px 3px #adb5bd;
+  -webkit-box-shadow: 1px 1px 3px #adb5bd;
+          box-shadow: 1px 1px 3px #adb5bd;
 }
+
 @media screen and (max-width: 768px) {
   header .bg {
     top: 60px;
     height: 80vh;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .bg {
     top: 60px;
@@ -465,16 +536,19 @@ header .bg {
   /* advisor */
   /* halfBanner */
 }
+
 #container .videoBox {
   position: relative;
   overflow: hidden;
   height: 100vh;
 }
+
 @media screen and (max-width: 768px) {
   #container .videoBox {
     display: none;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .videoBox {
     display: none;
@@ -482,79 +556,106 @@ header .bg {
     height: 100%;
   }
 }
+
 #container .videoBox video {
   width: 100%;
 }
+
 #container .videoBox .dArrow {
   position: absolute;
   bottom: 4vh;
   left: 50%;
-  transform: translate(-50%);
-  animation-duration: 0.7s;
-  animation-name: arrow;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-name: arrow;
+          animation-name: arrow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
+
 #container .videoBox .dArrow img {
   width: 30px;
 }
+
 #container .videoBox .dArrow p {
   color: white;
   text-align: center;
   text-indent: -4px;
 }
+
 #container .videoBox .dArrow:hover p {
   color: #192F6E;
 }
+
 #container .kindBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 60px 0 120px;
   padding-top: 80px;
 }
+
 @media screen and (max-width: 768px) {
   #container .kindBox {
     margin: 0;
     padding-top: 0;
     padding: 30px 0;
     width: 100%;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .kindBox {
     margin: 0 0 80px;
     padding-top: 40px;
     width: 100%;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+
 #container .kindBox li {
   position: relative;
   top: 80px;
   opacity: 0;
 }
+
 #container .kindBox li:hover p {
   color: #364fc7;
 }
+
 #container .kindBox li:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 1.2s;
   transition: 1.2s;
 }
+
 @media screen and (max-width: 768px) {
   #container .kindBox li {
     padding: 4vh 4px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: center;
     width: 50%;
     top: 0;
     opacity: 1;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .kindBox li {
     padding: 2vh 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: center;
     width: 25%;
     word-break: keep-all;
@@ -562,24 +663,29 @@ header .bg {
     opacity: 1;
   }
 }
+
 @media screen and (max-width: 768px) {
   #container .kindBox li a {
     opacity: 1;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .kindBox li a {
     opacity: 1;
   }
 }
+
 #container .kindBox p {
   position: absolute;
   bottom: -40px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 18px;
   font-weight: 500;
 }
+
 @media screen and (max-width: 768px) {
   #container .kindBox p {
     font-size: 16px;
@@ -589,14 +695,17 @@ header .bg {
     bottom: -4px;
   }
 }
+
 #container .kindBox img {
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   #container .kindBox img {
     width: 80%;
   }
 }
+
 #container .banner {
   width: 100%;
   height: 600px;
@@ -605,20 +714,24 @@ header .bg {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #container .banner .center {
   position: relative;
 }
+
 @media screen and (max-width: 768px) {
   #container .banner {
     height: 300px;
     background-position: left;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .banner {
     height: 400px;
   }
 }
+
 #container .banner p {
   text-align: center;
   position: relative;
@@ -627,6 +740,7 @@ header .bg {
   font-size: 42px;
   font-weight: 600;
 }
+
 @media screen and (max-width: 768px) {
   #container .banner p {
     top: 50px;
@@ -634,130 +748,162 @@ header .bg {
     color: black;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .banner p {
     top: 100px;
     color: black;
   }
 }
+
 #container .banner a {
   position: absolute;
   top: 480px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 150px;
 }
+
 @media screen and (max-width: 768px) {
   #container .banner a {
     top: 0;
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .banner a {
     top: 300px;
   }
 }
+
 #container .banner .kitBtn {
   left: 44%;
 }
+
 @media screen and (max-width: 768px) {
   #container .banner .kitBtn {
     top: 190px;
     width: 90%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .banner .kitBtn {
     left: 38%;
   }
 }
+
 #container .banner .itemBtn {
   left: 56%;
 }
+
 @media screen and (max-width: 768px) {
   #container .banner .itemBtn {
     top: 240px;
     width: 90%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .banner .itemBtn {
     left: 62%;
   }
 }
+
 #container .advisor {
   height: 400px;
   margin-bottom: 80px;
 }
+
 #container .advisor .center {
   position: relative;
 }
+
 #container .advisor img {
   position: absolute;
   top: 60px;
   left: 400px;
 }
+
 @media screen and (max-width: 768px) {
   #container .advisor img {
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .advisor img {
     top: 50px;
     left: 20%;
-    transform: translateX(-20%);
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
   }
 }
+
 #container .advisor .textBox {
   position: absolute;
   top: 100px;
   right: 400px;
 }
+
 @media screen and (max-width: 768px) {
   #container .advisor .textBox {
     width: 280px;
     top: 280px;
     right: 50%;
-    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
     text-align: center;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .advisor .textBox {
     top: 100px;
     right: 15%;
-    transform: translateX(15%);
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
   }
 }
+
 #container .advisor .textBox .aTitle {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 16px;
 }
+
 #container .advisor .textBox .aText {
   font-size: 20px;
   line-height: 2;
   padding-bottom: 20px;
 }
+
 #container .advisor a {
   width: 200px;
   color: white;
 }
+
 #container .halfBanner {
   height: 500px;
   margin: 20px 0 100px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   opacity: 0;
   position: relative;
   top: 20px;
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner {
     margin: 170px 0 0;
@@ -765,33 +911,43 @@ header .bg {
     top: 0;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .halfBanner {
     opacity: 1;
     top: 0;
   }
 }
+
 #container .halfBanner .bTitle {
   margin-top: -60px;
   margin-left: 12px;
   font-size: 32px;
   font-weight: bold;
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner .bTitle {
     margin-top: 0;
     font-size: 28px;
   }
 }
+
 #container .halfBanner .bannerWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner .bannerWrap {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
+
 #container .halfBanner .leftBanner {
   position: relative;
   width: 50%;
@@ -800,35 +956,42 @@ header .bg {
   background-position: center center;
   background-size: cover;
 }
+
 #container .halfBanner .leftBanner a {
   position: absolute;
   top: 80%;
   width: 200px;
 }
+
 #container .halfBanner .leftBanner .btn1 {
   left: 52%;
 }
+
 #container .halfBanner .leftBanner .btn2 {
   right: 52%;
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner .leftBanner a {
     width: 130px;
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .halfBanner .leftBanner a {
     width: 130px;
     font-size: 14px;
   }
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner .leftBanner {
     width: 100%;
     height: 400px;
   }
 }
+
 #container .halfBanner .rightBanner {
   position: relative;
   width: 50%;
@@ -837,41 +1000,49 @@ header .bg {
   background-position: center center;
   background-size: cover;
 }
+
 #container .halfBanner .rightBanner a {
   position: absolute;
   top: 80%;
   width: 200px;
 }
+
 #container .halfBanner .rightBanner .btn1 {
   left: 52%;
 }
+
 #container .halfBanner .rightBanner .btn2 {
   right: 52%;
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner .rightBanner a {
     width: 130px;
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .halfBanner .rightBanner a {
     width: 130px;
     font-size: 14px;
   }
 }
+
 @media screen and (max-width: 768px) {
   #container .halfBanner .rightBanner {
     width: 100%;
     height: 400px;
   }
 }
+
 #container .tip {
   margin-bottom: 100px;
   opacity: 0;
   position: relative;
   top: 20px;
 }
+
 @media screen and (max-width: 768px) {
   #container .tip {
     margin-bottom: 100px;
@@ -879,38 +1050,51 @@ header .bg {
     top: 0;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .tip {
     opacity: 1;
     top: 0;
   }
 }
+
 #container .tip .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  box-sizing: border-box;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 #container .tip .wrap .leftTip {
   width: 50%;
   margin-right: 20px;
   position: relative;
 }
+
 #container .tip .wrap .leftTip p {
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   font-size: 18px;
   text-align: center;
 }
+
 #container .tip .wrap .leftTip a {
   position: absolute;
   bottom: 20%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   width: 150px;
 }
+
 @media screen and (max-width: 768px) {
   #container .tip .wrap .leftTip p {
     width: 100%;
@@ -919,6 +1103,7 @@ header .bg {
     bottom: 6%;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .tip .wrap .leftTip p {
     width: 100%;
@@ -927,27 +1112,33 @@ header .bg {
     bottom: 6%;
   }
 }
+
 #container .tip .wrap .rightTip {
   width: 50%;
   margin-left: 20px;
   position: relative;
 }
+
 #container .tip .wrap .rightTip p {
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   font-size: 18px;
   text-align: center;
 }
+
 #container .tip .wrap .rightTip a {
   position: absolute;
   bottom: 20%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   width: 150px;
 }
+
 @media screen and (max-width: 768px) {
   #container .tip .wrap .rightTip p {
     width: 100%;
@@ -956,6 +1147,7 @@ header .bg {
     bottom: 6%;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .tip .wrap .rightTip p {
     width: 100%;
@@ -964,13 +1156,16 @@ header .bg {
     bottom: 6%;
   }
 }
+
 #container .tip .wrap img {
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   #container .tip .wrap {
     margin-top: 300px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #container .tip .wrap .leftTip {
     width: 100%;
@@ -986,13 +1181,16 @@ footer {
   background-color: #0B1432;
   position: relative;
 }
+
 footer .footLogo {
   padding: 40px 0 20px;
   text-align: center;
 }
+
 footer .footLogo img {
   width: 140px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLogo {
     padding: 20px 0 40px;
@@ -1001,36 +1199,44 @@ footer .footLogo img {
     width: 100px;
   }
 }
+
 footer .footLeft {
   float: left;
   margin-left: 100px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLeft {
     position: relative;
     margin-left: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     text-align: center;
   }
 }
+
 footer .footLeft ul {
   float: left;
   padding: 0 40px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLeft ul {
     padding: 0 4vw;
   }
 }
+
 footer .footLeft ul li {
   font-size: 18px;
   line-height: 3;
 }
+
 footer .footLeft ul li a {
   color: white;
   text-decoration: none;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLeft ul li {
     font-size: 16px;
@@ -1039,16 +1245,20 @@ footer .footLeft ul li a {
     word-break: keep-all;
   }
 }
+
 footer .footRight {
   float: right;
 }
+
 footer .footRight ul li {
   float: left;
   padding: 12px;
 }
+
 footer .footRight ul li img {
   width: 40px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footRight {
     margin: 0;
@@ -1056,18 +1266,22 @@ footer .footRight ul li img {
     position: absolute;
     top: -20%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 260px;
   }
 }
+
 footer address {
   padding: 40px 0 10px;
   text-align: center;
   color: white;
 }
+
 footer address span {
   padding: 0 5px;
 }
+
 @media screen and (max-width: 768px) {
   footer address {
     font-size: 14px;
@@ -1084,12 +1298,14 @@ aside {
   bottom: 30px;
   text-align: center;
 }
+
 aside p {
   padding: 4px 0;
   width: 60px;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 aside span {
   display: block;
   color: white;

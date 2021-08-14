@@ -4,7 +4,7 @@ a {
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
 }
 
@@ -184,6 +184,7 @@ header {
   position: fixed;
   z-index: 1000;
 }
+
 @media screen and (max-width: 426px) {
   header {
     height: 50px;
@@ -193,9 +194,11 @@ header {
 .logo {
   text-align: center;
 }
+
 .logo img {
   width: 120px;
 }
+
 @media screen and (max-width: 426px) {
   .logo img {
     width: 80px;
@@ -208,12 +211,14 @@ header {
   left: 40px;
   z-index: 150;
 }
+
 @media screen and (max-width: 426px) {
   .menuBtn {
     top: 8px;
     left: 24px;
   }
 }
+
 .menuBtn a {
   display: block;
   width: 40px;
@@ -221,11 +226,13 @@ header {
   background-image: url(../images/menuBtn.svg);
   background-repeat: no-repeat;
 }
+
 @media screen and (max-width: 426px) {
   .menuBtn a {
     width: 32px;
   }
 }
+
 .menuBtn a .acitve {
   display: block;
   width: 40px;
@@ -242,48 +249,59 @@ header {
   top: 0;
   z-index: 100;
 }
+
 @media screen and (max-width: 426px) {
   .menu {
     width: 44%;
   }
 }
+
 @media screen and (max-width: 768px) {
   .menu {
     width: 40%;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .menu {
     width: 30%;
   }
 }
+
 .menu img {
   width: 40px;
 }
+
 .menu > li {
   font-size: 24px;
   line-height: 3.5;
   padding-left: 40px;
   position: relative;
 }
+
 @media screen and (max-width: 426px) {
   .menu > li {
     padding-left: 20px;
     font-size: 18px;
   }
 }
+
 .menu > li:first-child {
   padding-top: 100px;
 }
+
 .menu > li:first-child:hover .subMenu {
   display: block;
 }
+
 .menu > li:hover > a {
   color: #ee0000;
 }
+
 .menu > li:hover::after {
   width: 60%;
 }
+
 .menu > li::after {
   content: "";
   display: block;
@@ -292,8 +310,10 @@ header {
   bottom: 0;
   left: 40px;
   background-color: rgba(238, 0, 0, 0.5);
+  -webkit-transition: 0.7s;
   transition: 0.7s;
 }
+
 .menu .subMenu {
   display: none;
   position: absolute;
@@ -303,20 +323,27 @@ header {
   overflow: hidden;
   width: 100%;
 }
+
 .menu .subMenu li {
   padding: 6px 12px;
   position: relative;
 }
+
 .menu .subMenu li:first-child {
   padding-top: 8px;
 }
+
 .menu .subMenu li:last-child {
   padding-bottom: 8px;
 }
+
 .menu .subMenu li:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 1s;
   transition: 1s;
 }
+
 .menu .subMenu img {
   width: 100%;
 }
@@ -325,14 +352,17 @@ header {
   z-index: 1;
   position: relative;
 }
+
 .videoWrap .videoBox video {
   width: 100%;
 }
+
 @media screen and (max-width: 426px) {
   .videoWrap .videoBox video {
     width: 100vw;
   }
 }
+
 .videoWrap .videoText {
   position: absolute;
   top: 40%;
@@ -342,6 +372,7 @@ header {
   font-weight: 500;
   line-height: 1.5;
 }
+
 @media screen and (max-width: 426px) {
   .videoWrap .videoText {
     font-size: 32px;
@@ -354,51 +385,63 @@ header {
   width: 100%;
   position: relative;
 }
+
 .eventWrap .event {
   overflow: hidden;
   padding: 100px 0 100px;
   width: 200%;
   position: relative;
 }
+
 @media screen and (max-width: 426px) {
   .eventWrap .event {
     width: 300%;
   }
 }
+
 .eventWrap .event li {
   float: left;
   width: calc(100%/6);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 10px;
   box-sizing: border-box;
 }
+
 .eventWrap .event li img {
   width: 100%;
 }
+
 .eventWrap .arrow {
   cursor: pointer;
 }
+
 .eventWrap .arrow .icon-left {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   color: #495057;
   background-color: rgba(222, 226, 230, 0.2);
 }
+
 @media screen and (max-width: 426px) {
   .eventWrap .arrow .icon-left {
     font-size: 20px;
   }
 }
+
 .eventWrap .arrow .icon-right {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   color: #495057;
   background-color: rgba(222, 226, 230, 0.2);
 }
+
 @media screen and (max-width: 426px) {
   .eventWrap .arrow .icon-right {
     font-size: 20px;
@@ -408,19 +451,25 @@ header {
 .photoWrap {
   position: relative;
 }
+
 .photoWrap li:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 1s;
   transition: 1s;
 }
+
 .photoWrap p {
   color: white;
   font-size: 42px;
 }
+
 @media screen and (max-width: 426px) {
   .photoWrap p {
     font-size: 32px;
   }
 }
+
 .photoWrap .leftPhoto {
   position: absolute;
   top: 100px;
@@ -428,31 +477,38 @@ header {
   width: 50%;
   overflow: hidden;
 }
+
 @media screen and (max-width: 768px) {
   .photoWrap .leftPhoto {
     position: static;
     width: 100%;
   }
 }
+
 .photoWrap .leftPhoto li {
   position: relative;
 }
+
 .photoWrap .leftPhoto li img {
   width: 100%;
   height: 350px;
 }
+
 @media screen and (max-width: 768px) {
   .photoWrap .leftPhoto li img {
     width: 100vw;
     height: 50vh;
   }
 }
+
 .photoWrap .leftPhoto li p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .photoWrap .rightPhoto {
   position: absolute;
   right: 0;
@@ -460,29 +516,35 @@ header {
   width: 50%;
   overflow: hidden;
 }
+
 @media screen and (max-width: 768px) {
   .photoWrap .rightPhoto {
     position: static;
     width: 100%;
   }
 }
+
 .photoWrap .rightPhoto li {
   position: relative;
 }
+
 .photoWrap .rightPhoto li img {
   width: 100%;
   height: 700px;
 }
+
 @media screen and (max-width: 768px) {
   .photoWrap .rightPhoto li img {
     height: 50vh;
   }
 }
+
 .photoWrap .rightPhoto li p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .brandWrap {
@@ -490,26 +552,31 @@ header {
   height: 350px;
   position: relative;
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap {
     margin-bottom: -400px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .brandWrap {
     margin-top: 100px;
   }
 }
+
 .brandWrap .sprite {
   position: absolute;
   left: -10%;
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap .sprite img {
     width: 100%;
     height: 50vh;
   }
 }
+
 @media screen and (max-width: 768px) {
   .brandWrap .sprite {
     position: relative;
@@ -519,6 +586,7 @@ header {
     width: 100vw;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .brandWrap .sprite {
     position: relative;
@@ -528,46 +596,56 @@ header {
     width: 100vw;
   }
 }
+
 .brandWrap .sprite .brandText {
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap .sprite .brandText {
     font-size: 6px;
     top: 40%;
   }
 }
+
 .brandWrap .sprite .brandText p {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap .sprite .brandText p {
     font-size: 24px;
   }
 }
+
 .brandWrap .sprite a {
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100px;
 }
+
 .brandWrap .fanta {
   position: absolute;
   right: -10%;
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap .fanta img {
     width: 100vw;
     height: 50vh;
   }
 }
+
 @media screen and (max-width: 768px) {
   .brandWrap .fanta {
     position: relative;
@@ -575,6 +653,7 @@ header {
     overflow: hidden;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .brandWrap .fanta {
     position: relative;
@@ -584,34 +663,41 @@ header {
     width: 100vw;
   }
 }
+
 .brandWrap .fanta .brandText {
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap .fanta .brandText {
     top: 40%;
     font-size: 6px;
   }
 }
+
 .brandWrap .fanta .brandText p {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
 }
+
 @media screen and (max-width: 426px) {
   .brandWrap .fanta .brandText p {
     font-size: 24px;
   }
 }
+
 .brandWrap .fanta a {
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100px;
 }
 
@@ -619,25 +705,35 @@ header {
   background-color: #ee0000;
   margin-top: 100px;
 }
+
 @media screen and (max-width: 768px) {
   .snsWrap {
     margin-top: 450px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .snsWrap {
     margin-top: 650px;
   }
 }
+
 .snsWrap .sns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
+
 .snsWrap .sns li {
   padding: 30px 50px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 @media screen and (max-width: 426px) {
   .snsWrap .sns li {
     padding: 20px;
@@ -648,12 +744,15 @@ footer {
   overflow: hidden;
   background-color: #dee2e6;
 }
+
 footer .footTop {
   text-align: center;
 }
+
 footer .footTop li {
   padding: 20px 0 10px;
 }
+
 footer p {
   text-align: center;
   color: #495057;

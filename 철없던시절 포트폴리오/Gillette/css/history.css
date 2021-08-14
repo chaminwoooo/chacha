@@ -4,7 +4,7 @@ a {
 }
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
 }
 
@@ -184,57 +184,70 @@ header {
   height: 80px;
   background-color: white;
   z-index: 1000;
-  box-shadow: 1px 1px 3px #adb5bd;
+  -webkit-box-shadow: 1px 1px 3px #adb5bd;
+          box-shadow: 1px 1px 3px #adb5bd;
 }
+
 @media screen and (max-width: 768px) {
   header {
     min-width: 100%;
     height: 60px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header {
     min-width: 100%;
     height: 60px;
   }
 }
+
 header > .center {
   position: relative;
 }
+
 header .logo {
   text-align: center;
   line-height: 70px;
 }
+
 @media screen and (max-width: 768px) {
   header .logo {
     line-height: 50px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .logo {
     line-height: 50px;
   }
 }
+
 header .logo img {
   width: 140px;
 }
+
 @media screen and (max-width: 768px) {
   header .logo img {
     width: 110px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .logo img {
     width: 110px;
   }
 }
+
 header i {
   display: block;
   width: 32px;
 }
+
 header .hamBtn {
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   header .hamBtn {
     display: block;
@@ -246,6 +259,7 @@ header .hamBtn {
     width: 32px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .hamBtn {
     display: block;
@@ -257,45 +271,53 @@ header .hamBtn {
     width: 32px;
   }
 }
+
 header .search {
   position: absolute;
   top: 4px;
   right: 0px;
 }
+
 @media screen and (max-width: 768px) {
   header .search {
     top: -6px;
     right: 16px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .search {
     top: -6px;
     right: 16px;
   }
 }
+
 header .menu {
   position: absolute;
   top: 0px;
   z-index: 500;
 }
+
 @media screen and (max-width: 768px) {
   header .menu {
     top: 8vh;
     display: none;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu {
     top: 8vh;
     display: none;
   }
 }
+
 header .menu > li {
   float: left;
   padding: 0 24px;
   line-height: 80px;
 }
+
 @media screen and (max-width: 768px) {
   header .menu > li {
     float: none;
@@ -304,17 +326,20 @@ header .menu > li {
     opacity: 0;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu > li {
     float: none;
   }
 }
+
 header .menu > li > a {
   font-size: 18px;
   font-weight: bold;
   color: #192F6E;
   position: relative;
 }
+
 header .menu > li > a::after {
   content: "";
   display: block;
@@ -324,28 +349,36 @@ header .menu > li > a::after {
   position: absolute;
   bottom: -20px;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 header .menu > li:hover .sub {
   display: block;
 }
+
 header .menu > li:hover .subImgWrap {
   display: none;
 }
+
 header .menu > li:hover > a::after {
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   header .menu > li:hover > a::after {
     width: 0%;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu > li:hover > a::after {
     width: 0%;
   }
 }
+
 header .menu .sub {
   display: none;
   position: absolute;
@@ -353,57 +386,73 @@ header .menu .sub {
   z-index: 50;
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   header .menu .sub {
     position: static;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu .sub {
     position: static;
   }
 }
+
 header .menu .sub > li {
   text-align: left;
   line-height: 4;
   padding-left: 24px;
 }
+
 @media screen and (max-width: 768px) {
   header .menu .sub > li {
     line-height: 2.5;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .menu .sub > li {
     line-height: 2.5;
   }
 }
+
 header .menu .sub > li:hover .subImgWrap {
   display: block;
 }
+
 @media screen and (max-width: 768px) {
   header .menu .sub > li:hover .subImgWrap {
     display: none;
   }
 }
+
 header .menu .sub > li:hover > a {
   color: #192F6E;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 header .menu .sub > li > a {
   font-size: 18px;
   font-weight: 600;
 }
+
 header .menu .sub .subImgWrap {
   display: none;
   position: absolute;
   top: 30px;
   left: 250px;
 }
+
 header .menu .sub .subImgWrap .subImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
+
 header .menu .sub .subImgWrap .subImg > li {
   float: left;
   padding: 0 40px;
@@ -411,15 +460,22 @@ header .menu .sub .subImgWrap .subImg > li {
   position: relative;
   top: 100px;
 }
+
 header .menu .sub .subImgWrap .subImg > li a:hover > p {
   color: #192F6E;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 header .menu .sub .subImgWrap .subImg > li a:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.8s;
   transition: 0.8s;
 }
+
 header .menu .sub .subImgWrap .subImg > li p {
   text-align: center;
   line-height: 1.2;
@@ -428,9 +484,11 @@ header .menu .sub .subImgWrap .subImg > li p {
   font-size: 16px;
   font-weight: 500;
 }
+
 header .menu .sub .subImgWrap .subImg > li img {
   width: 200px;
 }
+
 header .bg {
   display: none;
   position: absolute;
@@ -439,14 +497,17 @@ header .bg {
   height: 520px;
   background-color: white;
   z-index: 1;
-  box-shadow: 1px 1px 3px #adb5bd;
+  -webkit-box-shadow: 1px 1px 3px #adb5bd;
+          box-shadow: 1px 1px 3px #adb5bd;
 }
+
 @media screen and (max-width: 768px) {
   header .bg {
     top: 60px;
     height: 80vh;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   header .bg {
     top: 60px;
@@ -457,37 +518,44 @@ header .bg {
 #container {
   position: relative;
 }
+
 #container p {
   color: #192F6E;
 }
+
 #container .hTitle {
   font-size: 36px;
   font-weight: bold;
   padding: 20px 0;
 }
+
 @media screen and (max-width: 768px) {
   #container .hTitle {
     font-size: 28px;
     padding: 12px 0 4px;
   }
 }
+
 #container .subTitle {
   font-size: 28px;
   font-weight: 600;
   padding-bottom: 20px;
 }
+
 @media screen and (max-width: 768px) {
   #container .subTitle {
     font-size: 24px;
     padding-bottom: 10px;
   }
 }
+
 #container .textBox {
   font-size: 18px;
   line-height: 1.6;
   word-break: keep-all;
   color: #212529;
 }
+
 #container .gIndex {
   padding-top: 100px;
   height: 100vh;
@@ -496,49 +564,60 @@ header .bg {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 @media screen and (max-width: 768px) {
   #container .gIndex {
     background-image: url(../images/m_gHistory.jpg);
   }
 }
+
 #container .gIndex p {
   text-align: center;
   font-size: 18px;
   color: #0B1432;
 }
+
 #container .gIndex .gTitle {
   font-size: 32px;
   font-weight: bold;
   padding-bottom: 5vh;
 }
+
 #container .gIndex .gText2 {
   padding: 5vh 0 2vh;
   font-weight: 600;
 }
+
 @media screen and (max-width: 768px) {
   #container .gIndex .gText2 {
     padding: 3vh 0 2vh;
   }
 }
+
 #container .gIndex .sign {
   padding: 1vh 0;
 }
+
 #container .gIndex .sign img {
   width: 300px;
 }
+
 @media screen and (max-width: 768px) {
   #container .gIndex .sign img {
     display: none;
   }
 }
+
 #container .bladeHistory {
   position: absolute;
   top: 60vh;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-align: center;
   z-index: 500;
 }
+
 @media screen and (max-width: 768px) {
   #container .bladeHistory {
     top: 110vh;
@@ -546,54 +625,78 @@ header .bg {
     z-index: 5;
   }
 }
+
 #container .bladeHistory ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 90vw;
 }
+
 @media screen and (max-width: 768px) {
   #container .bladeHistory ul {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 320px;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .bladeHistory ul {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 90vw;
   }
 }
+
 #container .bladeHistory ul li {
   padding: 0 20px;
 }
+
 @media screen and (max-width: 768px) {
   #container .bladeHistory ul li {
     width: calc(100%/4);
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0px;
   }
   #container .bladeHistory ul li img {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   #container .bladeHistory ul li {
     width: calc(100%/8);
   }
 }
+
 #container .bladeHistory ul li a:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 1s;
   transition: 1s;
 }
+
 #container .bladeHistory ul li a:hover p {
   font-size: 20px;
+  -webkit-transition: 1s;
   transition: 1s;
 }
+
 #container .bladeHistory ul li p {
   color: #192F6E;
 }
+
 #container .h1900 {
   height: 40vh;
   padding-top: 100px;
@@ -604,6 +707,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1900.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1900 {
     margin: 20px 0 20vh;
@@ -611,22 +715,26 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1900 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1900 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 @media screen and (max-width: 768px) {
   #container .h1900 {
     margin-top: 450px;
   }
 }
+
 #container .h1920 {
   height: 40vh;
   padding-top: 100px;
@@ -637,6 +745,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1920.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1920 {
     margin: 20px 0 20vh;
@@ -644,17 +753,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1920 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1920 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1957 {
   height: 40vh;
   padding-top: 100px;
@@ -665,6 +777,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1957.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1957 {
     margin: 20px 0 20vh;
@@ -672,17 +785,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1957 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1957 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1965 {
   height: 40vh;
   padding-top: 100px;
@@ -693,6 +809,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1965.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1965 {
     margin: 20px 0 20vh;
@@ -700,17 +817,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1965 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1965 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1971 {
   height: 40vh;
   padding-top: 100px;
@@ -721,6 +841,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1971.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1971 {
     margin: 20px 0 20vh;
@@ -728,17 +849,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1971 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1971 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1977 {
   height: 40vh;
   padding-top: 100px;
@@ -749,6 +873,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1977.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1977 {
     margin: 20px 0 20vh;
@@ -756,17 +881,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1977 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1977 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1985 {
   height: 40vh;
   padding-top: 100px;
@@ -777,6 +905,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1985.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1985 {
     margin: 20px 0 20vh;
@@ -784,17 +913,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1985 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1985 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1990 {
   height: 40vh;
   padding-top: 100px;
@@ -805,6 +937,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1990.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1990 {
     margin: 20px 0 20vh;
@@ -812,17 +945,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1990 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1990 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h1998 {
   height: 40vh;
   padding-top: 100px;
@@ -833,6 +969,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_1998.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h1998 {
     margin: 20px 0 20vh;
@@ -840,17 +977,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h1998 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h1998 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h2010 {
   height: 40vh;
   padding-top: 100px;
@@ -861,6 +1001,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_2010.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h2010 {
     margin: 20px 0 20vh;
@@ -868,17 +1009,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h2010 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h2010 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h2014 {
   height: 40vh;
   padding-top: 100px;
@@ -889,6 +1033,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_2014.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h2014 {
     margin: 20px 0 20vh;
@@ -896,17 +1041,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h2014 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h2014 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 #container .h2016 {
   height: 40vh;
   padding-top: 100px;
@@ -917,6 +1065,7 @@ header .bg {
   background-size: cover;
   background-image: url(../images/history_2016.webp);
 }
+
 @media screen and (max-width: 768px) {
   #container .h2016 {
     margin: 20px 0 20vh;
@@ -924,17 +1073,20 @@ header .bg {
     background-size: contain;
   }
 }
+
 #container .h2016 .textWrap {
   position: absolute;
   top: 10%;
   left: 10%;
 }
+
 @media screen and (max-width: 768px) {
   #container .h2016 .textWrap {
     top: 60%;
     z-index: 5;
   }
 }
+
 @media screen and (max-width: 768px) {
   #container .h2016 {
     margin-bottom: 350px;
@@ -945,13 +1097,16 @@ footer {
   background-color: #0B1432;
   position: relative;
 }
+
 footer .footLogo {
   padding: 40px 0 20px;
   text-align: center;
 }
+
 footer .footLogo img {
   width: 140px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLogo {
     padding: 20px 0 40px;
@@ -960,36 +1115,44 @@ footer .footLogo img {
     width: 100px;
   }
 }
+
 footer .footLeft {
   float: left;
   margin-left: 100px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLeft {
     position: relative;
     margin-left: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     text-align: center;
   }
 }
+
 footer .footLeft ul {
   float: left;
   padding: 0 40px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLeft ul {
     padding: 0 4vw;
   }
 }
+
 footer .footLeft ul li {
   font-size: 18px;
   line-height: 3;
 }
+
 footer .footLeft ul li a {
   color: white;
   text-decoration: none;
 }
+
 @media screen and (max-width: 768px) {
   footer .footLeft ul li {
     font-size: 16px;
@@ -998,16 +1161,20 @@ footer .footLeft ul li a {
     word-break: keep-all;
   }
 }
+
 footer .footRight {
   float: right;
 }
+
 footer .footRight ul li {
   float: left;
   padding: 12px;
 }
+
 footer .footRight ul li img {
   width: 40px;
 }
+
 @media screen and (max-width: 768px) {
   footer .footRight {
     margin: 0;
@@ -1015,18 +1182,22 @@ footer .footRight ul li img {
     position: absolute;
     top: -20%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     width: 260px;
   }
 }
+
 footer address {
   padding: 40px 0 10px;
   text-align: center;
   color: white;
 }
+
 footer address span {
   padding: 0 5px;
 }
+
 @media screen and (max-width: 768px) {
   footer address {
     font-size: 14px;
@@ -1044,18 +1215,21 @@ aside {
   text-align: center;
   z-index: 1000;
 }
+
 @media screen and (max-width: 768px) {
   aside {
     right: 10px;
     bottom: 10px;
   }
 }
+
 aside p {
   padding: 4px 0;
   width: 60px;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 aside span {
   display: block;
   color: white;
