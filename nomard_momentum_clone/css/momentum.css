@@ -3,19 +3,24 @@
   margin: 0;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.05em;
+}
+
 #clock {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 500;
   color: #fff;
 }
 
 .bg-img {
-  width: 100%;
+  width: 100vw;
   max-height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
