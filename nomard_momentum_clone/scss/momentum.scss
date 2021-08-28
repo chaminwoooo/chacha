@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
@@ -10,10 +11,10 @@ body {
 
 #clock {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, -20%);
     font-size: 64px;
     font-weight: 500;
     color: #fff;
@@ -23,4 +24,20 @@ body {
     width: 100vw;
     max-height: 100vh;
     object-fit: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+#greeting {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, -20%);
+    font-size: 64px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 80px;
 }
